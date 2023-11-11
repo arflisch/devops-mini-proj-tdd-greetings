@@ -1,18 +1,44 @@
-function greet (name) {
+function greet (name, language = 'EN') {
   if (!Array.isArray(name)) {
     // case 2 :
     if (name === null || name === undefined || name === ' ') {
+      if (language === 'FR') {
+        return 'Bonjour, mon ami'
+      }
+      if (language === 'NL') {
+        return 'Hallo, mijn vriend'
+      }
       return 'Hello, my friend.'
     }
+
     // case 3 :
     if (name === name.toUpperCase()) {
+      if (language === 'FR') {
+        return `BONJOUR, ${name}!`
+      }
+      if (language === 'NL') {
+        return `HALLO, ${name}!`
+      }
       return `HELLO, ${name}!`
     }
     // case 1 :
+    if (language === 'FR') {
+      return `Bonjour, ${name}.`
+    }
+    if (language === 'NL') {
+      return `Hallo, ${name}.`
+    }
     return `Hello, ${name}.`
   }
+
   // case 4 :
   if (name.length === 2) {
+    if (language === 'FR') {
+      return `Bonjour, ${name[0]} et ${name[1]}.`
+    }
+    if (language === 'NL') {
+      return `Hallo, ${name[0]} en ${name[1]}.`
+    }
     return `Hello, ${name[0]} and ${name[1]}.`
   }
   // case 6 :
