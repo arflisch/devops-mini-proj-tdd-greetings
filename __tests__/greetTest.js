@@ -25,4 +25,9 @@ describe('greet', () => {
       'Hello, Laurent, Alexandre, Arnaud and Emeric.'
     )
   })
+  it('6: Greet Uppercase and lowercase names', () => {
+    expect(greet(['Laurent', 'Daniel', 'ALEXANDRE'])).toBe(
+      'Hello, Laurent and Daniel. AND HELLO ALEXANDRE!'
+    )
+  })
 })
