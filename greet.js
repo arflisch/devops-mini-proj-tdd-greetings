@@ -1,10 +1,12 @@
-// case 1 : 
+// case 1 :
 function greet (name) {
-  if(name===null || name=== undefined || name ===' ') {
+  if (name === null || name === undefined || name === ' ') {
     return 'Hello, my friend.'
-  }else{
-    return `Hello, ${name}.`
   }
+  if (name === name.toUpperCase()) {
+    return `HELLO, ${name}!`
+  }
+  return `Hello, ${name}.`
 }
 
 module.exports = greet
