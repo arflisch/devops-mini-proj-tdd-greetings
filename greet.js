@@ -9,8 +9,11 @@ function greet (name) {
     if (name.length === 2) {
       return `Hello, ${name[0]} and ${name[1]}.`
     }
-    if (name.length === 4) {
-      return `Hello, ${name[0]}, ${name[1]}, ${name[2]} and ${name[3]}.`
+    // case 5 :
+    if (name.length > 2) {
+      return `Hello, ${name.slice(0, -1).join(', ')} and ${name.slice(
+                -1
+            )}.`
     }
   }
   // case 3 :
