@@ -9,6 +9,9 @@ function greet (name) {
     if (name.length === 2) {
       return `Hello, ${name[0]} and ${name[1]}.`
     }
+    if (name.length === 4) {
+      return `Hello, ${name[0]}, ${name[1]}, ${name[2]} and ${name[3]}.`
+    }
   }
   // case 3 :
   if (name === name.toUpperCase()) {
