@@ -30,4 +30,12 @@ describe('greet', () => {
       'Hello, Laurent and Daniel. AND HELLO ALEXANDRE!'
     )
   })
+  it('7: Greet in multiple names and languages', () => {
+    expect(greet(['Laurent', 'Daniel'], 'FR')).toBe(
+      'Bonjour, Laurent et Daniel.'
+    )
+    expect(greet(['Laurent', 'Daniel'], 'NL')).toBe(
+      'Hallo, Laurent en Daniel.'
+    )
+  })
 })
