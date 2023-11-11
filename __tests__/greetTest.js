@@ -20,4 +20,9 @@ describe('greet', () => {
       'Hello, Laurent and Alexandre.'
     )
   })
+  it('5: Greet more than 2 names', () => {
+    expect(greet(['Laurent', 'Alexandre', 'Arnaud', 'Emeric'])).toBe(
+      'Hello, Laurent, Alexandre, Arnaud and Emeric.'
+    )
+  })
 })
