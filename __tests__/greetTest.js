@@ -14,4 +14,10 @@ describe('greet', () => {
   it('3: Greet Uppercase names', () => {
     expect(greet('ARNAUD')).toBe('HELLO, ARNAUD!')
   })
+
+  it('4: Greet 2 names', () => {
+    expect(greet(['Laurent', 'Alexandre'])).toBe(
+      'Hello, Laurent and Alexandre.'
+    )
+  })
 })
