@@ -52,6 +52,20 @@ function greet (name, language = 'EN') {
     }
   })
   if (lowercaseNames.length > 0 && upperCaseNames.length > 0) {
+    if (language === 'FR') {
+      return `Bonjour, ${lowercaseNames
+        .slice(0, -1)
+        .join(', ')} and ${lowercaseNames.slice(
+        -1
+    )}. ET BONJOUR ${upperCaseNames.join(' ')}!`
+    }
+    if (language === 'NL') {
+      return `Hallo, ${lowercaseNames
+        .slice(0, -1)
+        .join(', ')} and ${lowercaseNames.slice(
+        -1
+    )}. EN HALLO ${upperCaseNames.join(' ')}!`
+    }
     return `Hello, ${lowercaseNames
             .slice(0, -1)
             .join(', ')} and ${lowercaseNames.slice(
@@ -61,6 +75,12 @@ function greet (name, language = 'EN') {
 
   // case 5 :
   if (name.length > 2) {
+    if (language === 'FR') {
+      return `Bonjour, ${name.slice(0, -1).join(', ')} et ${name.slice(-1)}.`
+    }
+    if (language === 'NL') {
+      return `Hallo, ${name.slice(0, -1).join(', ')} en ${name.slice(-1)}.`
+    }
     return `Hello, ${name.slice(0, -1).join(', ')} and ${name.slice(-1)}.`
   }
 }
