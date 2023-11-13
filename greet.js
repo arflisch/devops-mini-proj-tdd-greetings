@@ -1,6 +1,6 @@
 function greet (name, language = 'EN') {
   if (!Array.isArray(name)) {
-    // case 2 :
+    // Case 2: Handle null, undefined, and empty values.
     if (name === null || name === undefined || name === ' ') {
       if (language === 'FR') {
         return 'Bonjour, mon ami'
@@ -11,7 +11,7 @@ function greet (name, language = 'EN') {
       return 'Hello, my friend.'
     }
 
-    // case 3 :
+    // Case 3:  Greet Uppercase names
     if (name === name.toUpperCase()) {
       if (language === 'FR') {
         return `BONJOUR, ${name}!`
@@ -21,7 +21,7 @@ function greet (name, language = 'EN') {
       }
       return `HELLO, ${name}!`
     }
-    // case 1 :
+    // case 1 : Greet someone in multiple languages
     if (language === 'FR') {
       return `Bonjour, ${name}.`
     }
@@ -31,7 +31,7 @@ function greet (name, language = 'EN') {
     return `Hello, ${name}.`
   }
 
-  // case 4 :
+  // case 4 : Greet 2 names in multiple languages
   if (name.length === 2) {
     if (language === 'FR') {
       return `Bonjour, ${name[0]} et ${name[1]}.`
@@ -41,7 +41,7 @@ function greet (name, language = 'EN') {
     }
     return `Hello, ${name[0]} and ${name[1]}.`
   }
-  // case 6 :
+  // case 6 : Greet Uppercase and lowercase names in multiple languages
   const lowercaseNames = []
   const upperCaseNames = []
   name.forEach((n) => {
@@ -73,7 +73,7 @@ function greet (name, language = 'EN') {
         )}. AND HELLO ${upperCaseNames.join(' ')}!`
   }
 
-  // case 5 :
+  // case 5 : Greet more than 2 names in multiples languages
   if (name.length > 2) {
     if (language === 'FR') {
       return `Bonjour, ${name.slice(0, -1).join(', ')} et ${name.slice(-1)}.`
